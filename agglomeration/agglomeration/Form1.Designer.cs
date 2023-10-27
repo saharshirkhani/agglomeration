@@ -32,8 +32,8 @@
             this.btnsignin = new System.Windows.Forms.Button();
             this.txtusername = new System.Windows.Forms.TextBox();
             this.txtpassword = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbuser = new System.Windows.Forms.Label();
+            this.lbpass = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnlogin
@@ -65,43 +65,45 @@
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(137, 34);
             this.txtusername.TabIndex = 2;
+            this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             // 
             // txtpassword
             // 
             this.txtpassword.Font = new System.Drawing.Font("B Morvarid", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtpassword.Location = new System.Drawing.Point(46, 103);
             this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '*';
             this.txtpassword.Size = new System.Drawing.Size(137, 34);
             this.txtpassword.TabIndex = 3;
             this.txtpassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // label1
+            // lbuser
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("B Morvarid", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(198, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 27);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "نام کاربری";
+            this.lbuser.AutoSize = true;
+            this.lbuser.Font = new System.Drawing.Font("B Morvarid", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lbuser.Location = new System.Drawing.Point(198, 67);
+            this.lbuser.Name = "lbuser";
+            this.lbuser.Size = new System.Drawing.Size(74, 27);
+            this.lbuser.TabIndex = 4;
+            this.lbuser.Text = "نام کاربری";
             // 
-            // label2
+            // lbpass
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("B Morvarid", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(198, 106);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 27);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "رمزعبور";
+            this.lbpass.AutoSize = true;
+            this.lbpass.Font = new System.Drawing.Font("B Morvarid", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lbpass.Location = new System.Drawing.Point(198, 106);
+            this.lbpass.Name = "lbpass";
+            this.lbpass.Size = new System.Drawing.Size(55, 27);
+            this.lbpass.TabIndex = 5;
+            this.lbpass.Text = "رمزعبور";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbpass);
+            this.Controls.Add(this.lbuser);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.txtusername);
             this.Controls.Add(this.btnsignin);
@@ -119,8 +121,8 @@
         private System.Windows.Forms.Button btnsignin;
         private System.Windows.Forms.TextBox txtusername;
         private System.Windows.Forms.TextBox txtpassword;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbuser;
+        private System.Windows.Forms.Label lbpass;
     }
 }
 
