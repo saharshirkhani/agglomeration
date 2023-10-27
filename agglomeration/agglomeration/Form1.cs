@@ -16,5 +16,24 @@ namespace agglomeration
         {
             InitializeComponent();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnlogin_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnsignin_Click(object sender, EventArgs e)
+        {
+            signin sign = new signin();
+            sign.ShowDialog();
+            this.Close();
+            
+
+        }
     }
 }
