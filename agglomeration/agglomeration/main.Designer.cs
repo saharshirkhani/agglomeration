@@ -28,61 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnadd = new System.Windows.Forms.Button();
+            this.btnsearch = new System.Windows.Forms.Button();
+            this.btnoutput = new System.Windows.Forms.Button();
+            this.btnexit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnadd
             // 
-            this.button1.Font = new System.Drawing.Font("B Titr", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button1.Location = new System.Drawing.Point(499, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 31);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "افزودن";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnadd.Font = new System.Drawing.Font("B Titr", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnadd.Location = new System.Drawing.Point(499, 12);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(75, 31);
+            this.btnadd.TabIndex = 0;
+            this.btnadd.Text = "افزودن";
+            this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
-            // button2
+            // btnsearch
             // 
-            this.button2.Font = new System.Drawing.Font("B Titr", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button2.Location = new System.Drawing.Point(403, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 31);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "جست و جو";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnsearch.Font = new System.Drawing.Font("B Titr", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnsearch.Location = new System.Drawing.Point(403, 12);
+            this.btnsearch.Name = "btnsearch";
+            this.btnsearch.Size = new System.Drawing.Size(75, 31);
+            this.btnsearch.TabIndex = 1;
+            this.btnsearch.Text = "جست و جو";
+            this.btnsearch.UseVisualStyleBackColor = true;
+            this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
             // 
-            // button3
+            // btnoutput
             // 
-            this.button3.Font = new System.Drawing.Font("B Titr", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button3.Location = new System.Drawing.Point(102, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 31);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "گزارش گیری";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnoutput.Font = new System.Drawing.Font("B Titr", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnoutput.Location = new System.Drawing.Point(102, 12);
+            this.btnoutput.Name = "btnoutput";
+            this.btnoutput.Size = new System.Drawing.Size(75, 31);
+            this.btnoutput.TabIndex = 2;
+            this.btnoutput.Text = "گزارش گیری";
+            this.btnoutput.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnexit
             // 
-            this.button4.Font = new System.Drawing.Font("B Titr", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button4.Location = new System.Drawing.Point(12, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 31);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "خروج";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnexit.Font = new System.Drawing.Font("B Titr", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnexit.Location = new System.Drawing.Point(12, 12);
+            this.btnexit.Name = "btnexit";
+            this.btnexit.Size = new System.Drawing.Size(75, 31);
+            this.btnexit.TabIndex = 3;
+            this.btnexit.Text = "خروج";
+            this.btnexit.UseVisualStyleBackColor = true;
+            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 302);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnexit);
+            this.Controls.Add(this.btnoutput);
+            this.Controls.Add(this.btnsearch);
+            this.Controls.Add(this.btnadd);
             this.Name = "main";
             this.Text = "main";
             this.ResumeLayout(false);
@@ -91,9 +94,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnadd;
+        private System.Windows.Forms.Button btnsearch;
+        private System.Windows.Forms.Button btnoutput;
+        private System.Windows.Forms.Button btnexit;
     }
 }
