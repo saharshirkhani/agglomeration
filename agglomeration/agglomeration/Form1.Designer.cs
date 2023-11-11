@@ -28,12 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnlogin = new System.Windows.Forms.Button();
             this.btnsignin = new System.Windows.Forms.Button();
             this.txtusername = new System.Windows.Forms.TextBox();
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.lbuser = new System.Windows.Forms.Label();
             this.lbpass = new System.Windows.Forms.Label();
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.agglomerationDataSet1 = new agglomeration.agglomerationDataSet();
+            this.agglomerationDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new agglomeration.agglomerationDataSetTableAdapters.UsersTableAdapter();
+            this.agglomerationDataSet2 = new agglomeration.agglomerationDataSet();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agglomerationDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agglomerationDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agglomerationDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnlogin
@@ -97,6 +109,29 @@
             this.lbpass.TabIndex = 5;
             this.lbpass.Text = "رمزعبور";
             // 
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "Users";
+            this.usersBindingSource1.DataSource = this.agglomerationDataSet1;
+            // 
+            // agglomerationDataSet1
+            // 
+            this.agglomerationDataSet1.DataSetName = "agglomerationDataSet";
+            this.agglomerationDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataSource = this.agglomerationDataSet1BindingSource;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // agglomerationDataSet2
+            // 
+            this.agglomerationDataSet2.DataSetName = "agglomerationDataSet";
+            this.agglomerationDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -110,6 +145,12 @@
             this.Controls.Add(this.btnlogin);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agglomerationDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agglomerationDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agglomerationDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,6 +164,12 @@
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.Label lbuser;
         private System.Windows.Forms.Label lbpass;
+        private System.Windows.Forms.BindingSource agglomerationDataSet1BindingSource;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private agglomerationDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
+        private System.Windows.Forms.BindingSource usersBindingSource1;
+        private agglomerationDataSet agglomerationDataSet1;
+        private agglomerationDataSet agglomerationDataSet2;
     }
 }
 

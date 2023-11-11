@@ -52,6 +52,11 @@
     <Compile Include="additem.Designer.cs">
       <DependentUpon>additem.cs</DependentUpon>
     </Compile>
+    <Compile Include="agglomerationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>agglomerationDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +101,17 @@
     <EmbeddedResource Include="signin.resx">
       <DependentUpon>signin.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="agglomerationDataSet.xsc">
+      <DependentUpon>agglomerationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="agglomerationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>agglomerationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="agglomerationDataSet.xss">
+      <DependentUpon>agglomerationDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

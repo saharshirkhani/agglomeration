@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace agglomeration
 {
     public partial class signin : Form
     {
+        SqlConnection sqlcon = new SqlConnection("Data Source=.;Initial Catalog=agglomeration;Integrated Security=True");
         public signin()
         {
             InitializeComponent();
@@ -36,6 +38,20 @@ namespace agglomeration
             txtpass.Text = "";
             txtusername.Text = "";
             
+        }
+
+        private void signin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            sqlcon.Open();
+            SqlCommand sqlcmd = new SqlCommand("insert into Users values('"+txtname.Text+"','"+txtfamily.Text+"','"+txtusername.Text+"','"+txtpass.Text+"','"+lstjob.SelectedItem.ToString()+"')'",sqlcon);
+            sqlcmd.ExecuteNonQuery();
+            sqlcon.Close();
+            MessageBox.Show("ثبت نام با موفقیت انجام شد", "تائیدیه ثبت نام", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
